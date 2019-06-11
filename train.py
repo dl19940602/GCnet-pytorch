@@ -138,17 +138,13 @@ def main():
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
-#            transforms.Normalize((0.4914, 0.4822, 0.4465),
-#                                 (0.2023, 0.1994, 0.2010)),
-            transforms.Normalize((0.5070751592371323, 0.48654887331495095, 0.4409178433670343),
-                                 (0.2673342858792401, 0.2564384629170883, 0.27615047132568404)),
+            transforms.Normalize((0.4914, 0.4822, 0.4465),
+                                 (0.2023, 0.1994, 0.2010)),
         ])
         transform_test = transforms.Compose([
             transforms.ToTensor(),
-#            transforms.Normalize((0.4914, 0.4822, 0.4465),
-#                                 (0.2023, 0.1994, 0.2010)),
-            transforms.Normalize((0.5070751592371323, 0.48654887331495095, 0.4409178433670343),
-                                 (0.2673342858792401, 0.2564384629170883, 0.27615047132568404)),
+            transforms.Normalize((0.4914, 0.4822, 0.4465),
+                                 (0.2023, 0.1994, 0.2010)),
         ])
 
         train_set = datasets.CIFAR100(
@@ -183,20 +179,17 @@ def main():
             transforms.RandomResizedCrop(224),
             transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
-#            transforms.Normalize((0.485, 0.456, 0.406),
-#                                 (0.229, 0.224, 0.225)),
-            transforms.Normalize((0.5070751592371323, 0.48654887331495095, 0.4409178433670343),
-                                 (0.2673342858792401, 0.2564384629170883, 0.27615047132568404)),
+            transforms.Normalize((0.485, 0.456, 0.406),
+                                 (0.229, 0.224, 0.225)),
         ])
         transform_test = transforms.Compose([
             transforms.Resize(256),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
-#            transforms.Normalize((0.485, 0.456, 0.406),
-#                                 (0.229, 0.224, 0.225)),
+            transforms.Normalize((0.485, 0.456, 0.406),
+                                 (0.229, 0.224, 0.225)),
         ])
-            transforms.Normalize((0.5070751592371323, 0.48654887331495095, 0.4409178433670343),
-                                 (0.2673342858792401, 0.2564384629170883, 0.27615047132568404)),
+        
         train_set = datasets.ImageFolder(
             train_dir,
             transform_train)
