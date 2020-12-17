@@ -15,7 +15,7 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 
 from utils import *
-import GCnet_block
+import GCnet
 
 
 def parse_args():
